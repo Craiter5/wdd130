@@ -1,0 +1,180 @@
+/* This is the style sheet that will be universal for the 
+portal page reagrding the headers, footers, and wrappers */
+
+body {
+    background-color: #0D437E;
+}
+
+#wrapper {
+    background-color: aliceblue;
+    border: black 1px solid;
+    border-radius: 25px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 20px
+}
+
+/* Here down is for the header and navigation */
+
+header {
+    background-image: url(../images/goldenHour.png);
+    background-position: center;
+    border-radius: 20px;
+    height: 300px;
+    /* header grid */
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr 1fr;
+}
+
+header h1 {
+    grid-column: 1 / 9;
+    grid-row: 1 / 2;
+    display: flex;
+    justify-content: center;
+
+    font-size: 55px;
+    font-family: Helvetica, 'Segoe UI', sans-serif;
+    color: #1f5a98;
+    text-shadow: 0 0 20px #b03429;
+}
+
+nav {
+    grid-column: 1 / 9;
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.drop {
+    position: relative;
+    display: inline-block;
+}
+
+.drop-btn, .contact-btn{
+    cursor: pointer;
+}
+
+.drop-content {
+    display: none;
+    position: absolute;
+}
+
+.drop-content a {
+    display: block;
+    text-decoration: none;
+}
+
+.drop:hover .drop-content {
+    display: block;
+}
+
+.nav-select, .drop-btn {
+    width: 100px;
+    height: 60px;
+    border: solid 2px black;
+    background-color: #b03429;
+    border-radius: 10px;
+    box-shadow: 0 0 5px black;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FDE02F;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: Helvetica, 'Segoe UI', sans-serif;
+}
+
+.nav-select:hover, .drop-btn:hover {
+    background-color: #f07b24;
+    color: #0D437E;
+} 
+
+.contact-form {
+    position: relative;
+    display: inline-block;
+}
+
+.fill-form {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    z-index: 1;
+    background-color: #f07b24; 
+    color: #0D437E;
+    font-family: Helvetica, 'Segoe UI', sans-serif;
+    width: 200px;
+    padding: 10px;
+    border: black 2px solid;
+    border-radius: 10px;
+}
+
+.contact-form:hover .fill-form {
+    display: block;
+}
+
+.drop a, .contact-btn {
+    padding: 10px;
+    width: 155px;
+    height: 40px;
+    border-radius: 5px;
+    border: black 2px solid;
+    background-color: #f07b24;
+    color: #0D437E;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: Helvetica, 'Segoe UI', sans-serif;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#contact-message input {
+    height: 40px;
+}
+
+.fill-form form button {
+    background-color: #b03429;
+    color: #FDE02F;
+    margin-top: 5px;
+    border: black 2px solid;
+    border-radius: 3px;
+}
+
+.fill-form form button:hover {
+    background-color: #f07b24;
+    color: #0D437E;
+}
+
+/* Here down is code for the footer */
+
+footer {
+    display: grid;
+    height: 80px;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 8px;
+}
+
+#copyright {
+    grid-column: 2;
+    justify-content: center;
+    align-self: end;
+    text-align: center;
+    margin: 0;
+    width: 280px;
+    order: 1
+}
+
+.social-links, .social-links img  {
+    grid-column: 1;
+    border-radius: 10px;
+    display: flex;
+    align-self: end;
+    gap: 6px;
+    margin-top: 0;
+
+}
